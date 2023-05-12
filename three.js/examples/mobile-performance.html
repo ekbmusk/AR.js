@@ -132,7 +132,7 @@
 	var arWorldRoot = smoothedRoot
 
 	// add a torus knot
-	var geometry	= new THREE.BoxGeometry(1,1,1);
+	/*var geometry	= new THREE.BoxGeometry(1,1,1);
 	var material	= new THREE.MeshNormalMaterial({
 		transparent : true,
 		opacity: 0.5,
@@ -150,8 +150,15 @@
 
 	onRenderFcts.push(function(){
 		mesh.rotation.x += 0.1
-	})
-
+	})*/
+	const loader = new THREE.TextureLoader();
+	var geometry = new THREE.PlaneGeometry(1, 1);
+	var material = material = new THREE.MeshBasicMaterial({
+		map: loader.load('data/images/1.png');
+	var mesh = new THREE.Mesh( geometry, material );
+	mesh.position.y	= 0.5
+	arWorldRoot.add( mesh );
+	
 	//////////////////////////////////////////////////////////////////////////////////
 	//		render the whole thing on the page
 	//////////////////////////////////////////////////////////////////////////////////
