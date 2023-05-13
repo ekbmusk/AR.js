@@ -154,7 +154,7 @@
 	const loader = new THREE.TextureLoader();
 	var geometry = new THREE.PlaneGeometry(4, 3);
 	var material = new THREE.MeshBasicMaterial({
-		map: loader.load('data/images/1.png');
+		map: loader.load('data/images/1.png')});
 	var mesh = new THREE.Mesh( geometry, material );
 	mesh.position.y	= 0.5
 	arWorldRoot.add( mesh );
