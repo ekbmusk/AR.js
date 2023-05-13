@@ -152,7 +152,7 @@
 		mesh.rotation.x += 0.1
 	})*/
 	const loader = new THREE.TextureLoader();
-	var geometry = new THREE.PlaneGeometry(1, 1);
+	var geometry = new THREE.PlaneGeometry(4, 3);
 	var material = new THREE.MeshBasicMaterial({
 		map: loader.load('data/images/1.png');
 	var mesh = new THREE.Mesh( geometry, material );
